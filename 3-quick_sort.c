@@ -1,6 +1,21 @@
 #include "sort.h"
 
 /**
+ * elem_swap - Swaps two elements
+ * @el1: First element
+ * @el2: Second element
+ *
+ */
+
+void elem_swap(int *el1, int *el2)
+{
+	int temp;
+
+	temp = *el1;
+	*el1 = *el2;
+	*el2 = temp;
+}
+/**
  * lomuto_partition - Orders a subset of an integer array using the lomuto
  * partition scheme
  * @array: The array to be ordered
@@ -54,7 +69,7 @@ void lomuto_sort(int *array, size_t size, int start, int end)
 	{
 		partition = lomuto_partition(array, size, start, end);
 		lomuto_sort(array, size, start, partition - 1);
-		lomuto_sort(array, size, partition + 1; end);
+		lomuto_sort(array, size, partition + 1, end);
 	}
 }
 

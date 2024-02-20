@@ -10,9 +10,9 @@ void elem_swap(int *num1, int *num2)
 {
 	int temp;
 
-	temp = num1;
-	num1 = num2;
-	num2 = temp;
+	temp = *num1;
+	*num1 = *num2;
+	*num2 = temp;
 }
 
 /**
@@ -32,7 +32,7 @@ void selection_sort(int *array, size_t size)
 
 	for (a = 0; a < size - 1; a++)
 	{
-		small = array + 1;
+		small = array + a;
 		for (c = a + 1; c < size; c++)
 			small = (array[c] < *small) ? (array + c) : small;
 
