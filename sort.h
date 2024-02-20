@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 /**
- * enum - Boolean values enumeration
+ * enum bool - Boolean values enumeration
  * @false: Is 0
  * @true: Is 1
  */
